@@ -27,7 +27,6 @@ public class VehicleDTO implements Serializable {
     @Size(min = 20)
     private String url;
 
-    @NotNull
     private String fullName;
 
     public Long getId() {
@@ -60,6 +59,14 @@ public class VehicleDTO implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     @Override

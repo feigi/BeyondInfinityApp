@@ -38,6 +38,9 @@ public class Vehicle implements Serializable {
     @Column(name = "url", nullable = false)
     private String url;
 
+    @Transient
+    private String fullName;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -85,10 +88,16 @@ public class Vehicle implements Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     public String getFullName() {
-        return String.format("%s %s", manufacturer.getName(), model);
+        return fullName;
+    }
+
+    @PostLoad
+    public void postLoad() {
+        this.fullName = String.format("%s %s", manufacturer.getName(), model);
     }
 
     @Override

@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <changeSet id="20171202141800-1" author="zieglerch">
+    <changeSet id="20171202141800-1" author="zieglerch" context="!test">
 
         <loadData encoding="UTF-8"
                   file="config/liquibase/vehicles.csv"

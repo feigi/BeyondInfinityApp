@@ -220,7 +220,7 @@ public class VehicleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(vehicle.getId().intValue())))
-            .andExpect(jsonPath("$.[*].manufacturer").value(hasItem(DEFAULT_MANUFACTURER.toString())))
+            .andExpect(jsonPath("$.[*].manufacturer").value(hasItem(DEFAULT_MANUFACTURER.getName())))
             .andExpect(jsonPath("$.[*].model").value(hasItem(DEFAULT_MODEL.toString())))
             .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())));
     }
@@ -236,7 +236,7 @@ public class VehicleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(vehicle.getId().intValue()))
-            .andExpect(jsonPath("$.manufacturer").value(DEFAULT_MANUFACTURER.toString()))
+            .andExpect(jsonPath("$.manufacturer").value(DEFAULT_MANUFACTURER.getName()))
             .andExpect(jsonPath("$.model").value(DEFAULT_MODEL.toString()))
             .andExpect(jsonPath("$.url").value(DEFAULT_URL.toString()));
     }
@@ -365,7 +365,7 @@ public class VehicleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(vehicle.getId().intValue())))
-            .andExpect(jsonPath("$.[*].manufacturer").value(hasItem(DEFAULT_MANUFACTURER.toString())))
+            .andExpect(jsonPath("$.[*].manufacturer").value(hasItem(DEFAULT_MANUFACTURER.getName())))
             .andExpect(jsonPath("$.[*].model").value(hasItem(DEFAULT_MODEL.toString())))
             .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL.toString())));
     }

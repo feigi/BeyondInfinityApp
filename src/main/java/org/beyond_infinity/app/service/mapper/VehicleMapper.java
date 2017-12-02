@@ -11,9 +11,9 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {})
 public interface VehicleMapper extends EntityMapper<VehicleDTO, Vehicle> {
 
-    
 
-    
+    @Mapping(source = "vehicle.fullName", target = "fullName")
+    VehicleDTO toDto(Vehicle vehicle);
 
     default Vehicle fromId(Long id) {
         if (id == null) {

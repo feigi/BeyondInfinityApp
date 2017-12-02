@@ -17,7 +17,7 @@
             <label class="form-control-label" for="field_vehicle">Vehicle</label>
             <select class="form-control" id="field_vehicle" name="vehicle" [(ngModel)]="vehicleOwnership.vehicleId"  required>
                 <option *ngIf="!editForm.value.vehicle" [ngValue]="null" selected></option>
-                <option [ngValue]="vehicleOption.fullName" *ngFor="let vehicleOption of vehicles; trackBy: trackVehicleById">{{vehicleOption.id}}</option>
+                <option [ngValue]="vehicleOption.id" *ngFor="let vehicleOption of vehicles; trackBy: trackVehicleById">{{vehicleOption.fullName}}</option>
             </select>
         </div>
         <div [hidden]="!(editForm.controls.vehicle?.dirty && editForm.controls.vehicle?.invalid)">

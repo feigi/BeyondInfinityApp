@@ -1,82 +1,82 @@
 id;manufacturer;model;url
-1100;AEGIS_DYNAMICS;AVENGER STALKER;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Stalker
-1101;AEGIS_DYNAMICS;AVENGER TITAN;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Titan
-1102;AEGIS_DYNAMICS;AVENGER TITAN RENEGADE;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Titan-Renegade
-1103;AEGIS_DYNAMICS;AVENGER WARLOCK;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Warlock
-1104;AEGIS_DYNAMICS;ECLIPSE;https://robertsspaceindustries.com/pledge/ships/eclipse/Eclipse
-1105;AEGIS_DYNAMICS;GLADIUS;https://robertsspaceindustries.com/pledge/ships/gladius/Gladius
-1106;AEGIS_DYNAMICS;GLADIUS VALIANT;http://robertsspaceindustries.com/pledge/ships/gladius/Gladius-Valiant
-1107;AEGIS_DYNAMICS;IDRIS-M;https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-M
-1108;AEGIS_DYNAMICS;IDRIS-P;https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-P
-1109;AEGIS_DYNAMICS;JAVELIN;https://robertsspaceindustries.com/pledge/ships/aegis-javelin/Javelin
-1110;AEGIS_DYNAMICS;RECLAIMER;https://robertsspaceindustries.com/pledge/ships/reclaimer/Reclaimer
-1111;AEGIS_DYNAMICS;REDEEMER;https://robertsspaceindustries.com/pledge/ships/redeemer/Redeemer
-1112;AEGIS_DYNAMICS;RETALIATOR BASE;http://obertsspaceindustries.com/pledge/ships/aegis-retaliator/Retaliator-Base
-1113;AEGIS_DYNAMICS;RETALIATOR BOMBER;https://robertsspaceindustries.com/pledge/ships/aegis-retaliator/Retaliator-Bomber
-1114;AEGIS_DYNAMICS;SABRE;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre
-1115;AEGIS_DYNAMICS;SABRE COMET;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre-Comet
-1116;AEGIS_DYNAMICS;SABRE RAVEN;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre-Raven
-1117;AEGIS_DYNAMICS;VANGUARD HARBRINGER;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Harbringer
-1118;AEGIS_DYNAMICS;VANGUARD HOPLITE;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Hoplite
-1119;AEGIS_DYNAMICS;VANGUARD SENTINEL;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Sentinel
-1120;AEGIS_DYNAMICS;VANGUARD WARDEN;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Warden
-1200;ANVIL_AEROSPACE;CARRACK;https://robertsspaceindustries.com/pledge/ships/carrack/Carrack
-1201;ANVIL_AEROSPACE;CRUCIBLE;https://robertsspaceindustries.com/pledge/ships/crucible/Crucible
-1202;ANVIL_AEROSPACE;F7A HORNET;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7A-Hornet
-1203;ANVIL_AEROSPACE;F7C HORNET;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-Hornet
-1204;ANVIL_AEROSPACE;F7C HORNET WILDFIRE;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-Hornet-Wildfire
-1205;ANVIL_AEROSPACE;F7C-M SUPER HORNET;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-M-Super-Hornet
-1206;ANVIL_AEROSPACE;F7C-R HORNET TRACKER;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-R-Hornet-Tracker
-1207;ANVIL_AEROSPACE;F7C-S HORNET GHOST;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-S-Hornet-Ghost
-1208;ANVIL_AEROSPACE;GLADIATOR;https://robertsspaceindustries.com/pledge/ships/anvil-gladiator/Gladiator
-1209;ANVIL_AEROSPACE;HURRICANE;https://robertsspaceindustries.com/pledge/ships/hurricane/Hurricane
-1210;ANVIL_AEROSPACE;TERRAPIN;https://robertsspaceindustries.com/pledge/ships/terrapin/Terrapin
-1300;AOPOA;KHARTU-AL;https://robertsspaceindustries.com/pledge/ships/khartu/Khartu-Al
-1301;AOPOA;NOX;https://robertsspaceindustries.com/pledge/ships/nox/Nox
-1302;AOPOA;NOX KUE;https://robertsspaceindustries.com/pledge/ships/nox/Nox-Kue
-1400;ARGO;MPUV CARGO;https://robertsspaceindustries.com/pledge/ships/argo/MPUV-Cargo
-1401;ARGO;MPUV PERSONNEL;https://robertsspaceindustries.com/pledge/ships/argo/MPUV-Personnel
+1100;AEGIS_DYNAMICS;Avenger Stalker;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Stalker
+1101;AEGIS_DYNAMICS;Avenger Titan;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Titan
+1102;AEGIS_DYNAMICS;Avenger Titan Renegade;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Titan-Renegade
+1103;AEGIS_DYNAMICS;Avenger Warlock;https://robertsspaceindustries.com/pledge/ships/aegis-avenger/Avenger-Warlock
+1104;AEGIS_DYNAMICS;Eclipse;https://robertsspaceindustries.com/pledge/ships/eclipse/Eclipse
+1105;AEGIS_DYNAMICS;Gladius;https://robertsspaceindustries.com/pledge/ships/gladius/Gladius
+1106;AEGIS_DYNAMICS;Gladius Valiant;http://robertsspaceindustries.com/pledge/ships/gladius/Gladius-Valiant
+1107;AEGIS_DYNAMICS;Idris-M;https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-M
+1108;AEGIS_DYNAMICS;Idris-P;https://robertsspaceindustries.com/pledge/ships/aegis-idris/Idris-P
+1109;AEGIS_DYNAMICS;Javelin;https://robertsspaceindustries.com/pledge/ships/aegis-javelin/Javelin
+1110;AEGIS_DYNAMICS;Reclaimer;https://robertsspaceindustries.com/pledge/ships/reclaimer/Reclaimer
+1111;AEGIS_DYNAMICS;Redeemer;https://robertsspaceindustries.com/pledge/ships/redeemer/Redeemer
+1112;AEGIS_DYNAMICS;Retaliator Base;http://obertsspaceindustries.com/pledge/ships/aegis-retaliator/Retaliator-Base
+1113;AEGIS_DYNAMICS;Retaliator Bomber;https://robertsspaceindustries.com/pledge/ships/aegis-retaliator/Retaliator-Bomber
+1114;AEGIS_DYNAMICS;Sabre;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre
+1115;AEGIS_DYNAMICS;Sabre Comet;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre-Comet
+1116;AEGIS_DYNAMICS;Sabre Raven;https://robertsspaceindustries.com/pledge/ships/sabre/Sabre-Raven
+1117;AEGIS_DYNAMICS;Vanguard Harbringer;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Harbringer
+1118;AEGIS_DYNAMICS;Vanguard Hoplite;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Hoplite
+1119;AEGIS_DYNAMICS;Vanguard Sentinel;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Sentinel
+1120;AEGIS_DYNAMICS;Vanguard Warden;https://robertsspaceindustries.com/pledge/ships/vanguard/Vanguard-Warden
+1200;ANVIL_AEROSPACE;Carrack;https://robertsspaceindustries.com/pledge/ships/carrack/Carrack
+1201;ANVIL_AEROSPACE;Crucible;https://robertsspaceindustries.com/pledge/ships/crucible/Crucible
+1202;ANVIL_AEROSPACE;F7A Hornet;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7A-Hornet
+1203;ANVIL_AEROSPACE;F7C Hornet;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-Hornet
+1204;ANVIL_AEROSPACE;F7C Hornet Wildfire;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-Hornet-Wildfire
+1205;ANVIL_AEROSPACE;F7C-M Super Hornet;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-M-Super-Hornet
+1206;ANVIL_AEROSPACE;F7C-R Hornet Tracker;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-R-Hornet-Tracker
+1207;ANVIL_AEROSPACE;F7C-S Hornet Ghost;https://robertsspaceindustries.com/pledge/ships/anvil-hornet/F7C-S-Hornet-Ghost
+1208;ANVIL_AEROSPACE;Gladiator;https://robertsspaceindustries.com/pledge/ships/anvil-gladiator/Gladiator
+1209;ANVIL_AEROSPACE;Hurricane;https://robertsspaceindustries.com/pledge/ships/hurricane/Hurricane
+1210;ANVIL_AEROSPACE;Terrapin;https://robertsspaceindustries.com/pledge/ships/terrapin/Terrapin
+1300;AOPOA;Khartu-Al;https://robertsspaceindustries.com/pledge/ships/khartu/Khartu-Al
+1301;AOPOA;Nox;https://robertsspaceindustries.com/pledge/ships/nox/Nox
+1302;AOPOA;Nox Kue;https://robertsspaceindustries.com/pledge/ships/nox/Nox-Kue
+1400;ARGO;MPUV Cargo;https://robertsspaceindustries.com/pledge/ships/argo/MPUV-Cargo
+1401;ARGO;MPUV Personell;https://robertsspaceindustries.com/pledge/ships/argo/MPUV-Personnel
 1500;BANU;DEFENDER;https://robertsspaceindustries.com/pledge/ships/defender/Defender
 1501;BANU;MERCHANTMAN;https://robertsspaceindustries.com/pledge/ships/merchantman/Merchantman
-1600;CONSOLIDATED_OUTLAND;MUSTANG ALPHA;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Alpha
-1601;CONSOLIDATED_OUTLAND;MUSTANG BETA;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Beta
-1602;CONSOLIDATED_OUTLAND;MUSTANG DELTA;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Delta
-1603;CONSOLIDATED_OUTLAND;MUSTANG GAMMA;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Gamma
-1604;CONSOLIDATED_OUTLAND;MUSTANG OMEGA;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Omega
-1605;CONSOLIDATED_OUTLAND;PIONEER;https://robertsspaceindustries.com/pledge/ships/pioneer/Pioneer
-1700;CRUSADER_INDUSTRIES;GENESIS STARLINER;https://robertsspaceindustries.com/pledge/ships/starliner/Genesis-Starliner
-1800;DRAKE_INTERPLANETARY;BUCCANEER;https://robertsspaceindustries.com/pledge/ships/drake-buccaneer/Buccaneer
-1801;DRAKE_INTERPLANETARY;CATERPILLAR;https://robertsspaceindustries.com/pledge/ships/drake-caterpillar/Caterpillar
-1802;DRAKE_INTERPLANETARY;CATERPILLAR PIRATE EDITION;https://robertsspaceindustries.com/pledge/ships/drake-caterpillar/Caterpillar-Pirate-Edition
-1803;DRAKE_INTERPLANETARY;CUTLASS BLACK;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Black
-1804;DRAKE_INTERPLANETARY;CUTLASS BLUE;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Blue
-1805;DRAKE_INTERPLANETARY;CUTLASS RED;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Red
-1806;DRAKE_INTERPLANETARY;DRAGONFLY BLACK;https://robertsspaceindustries.com/pledge/ships/drake-dragonfly/Dragonfly-Black
-1807;DRAKE_INTERPLANETARY;DRAGONFLY YELLOWJACKET;https://robertsspaceindustries.com/pledge/ships/drake-dragonfly/Dragonfly-Yellowjacket
-1808;DRAKE_INTERPLANETARY;HERALD;https://robertsspaceindustries.com/pledge/ships/herald/Herald
-1900;ESPERIA;BLADE;https://robertsspaceindustries.com/pledge/ships/vanduul-blade/Blade
-1901;ESPERIA;GLAIVE;https://robertsspaceindustries.com/pledge/ships/esperia-glaive/Glaive
-1902;ESPERIA;PROWLER;https://robertsspaceindustries.com/pledge/ships/prowler/Prowler
-2000;KRUGER_INTERGALACTIC;P52 MERLIN;https://robertsspaceindustries.com/pledge/ships/p52-merlin/P52-Merlin
-2001;KRUGER_INTERGALACTIC;P72 ARCHIMEDES;https://robertsspaceindustries.com/pledge/ships/p72-archimedes/P72-Archimedes
-2100;MISC;ENDEAVOR;https://robertsspaceindustries.com/pledge/ships/misc-endeavor/Endeavor
-2101;MISC;FREELANCER;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer
-2102;MISC;FREELANCER DUR;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-DUR
-2103;MISC;FREELANCER MAX;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-MAX
-2104;MISC;FREELANCER MIS;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-MIS
-2105;MISC;HULL A;https://robertsspaceindustries.com/pledge/ships/hull/Hull-A
-2106;MISC;HULL B;https://robertsspaceindustries.com/pledge/ships/hull/Hull-B
-2107;MISC;HULL C;https://robertsspaceindustries.com/pledge/ships/hull/Hull-C
-2108;MISC;HULL D;https://robertsspaceindustries.com/pledge/ships/hull/Hull-D
-2109;MISC;HULL E;https://robertsspaceindustries.com/pledge/ships/hull/Hull-E
-2110;MISC;PROSPECTOR;https://robertsspaceindustries.com/pledge/ships/misc-prospector/Prospector
-2111;MISC;RAZOR;https://robertsspaceindustries.com/pledge/ships/razor/Razor
-2112;MISC;RELIANT KORE;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Kore
-2113;MISC;RELIANT MAKO;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Mako
-2114;MISC;RELIANT SEN;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Sen
-2115;MISC;RELIANT TANA;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Tana
-2116;MISC;STARFARER;https://robertsspaceindustries.com/pledge/ships/misc-starfarer/Starfarer
-2117;MISC;STARFARER GEMINI;http://robertsspaceindustries.com/pledge/ships/misc-starfarer/Starfarer-Gemini
+1600;CONSOLIDATED_OUTLAND;Mustang Alpha;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Alpha
+1601;CONSOLIDATED_OUTLAND;Mustang Beta;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Beta
+1602;CONSOLIDATED_OUTLAND;Mustang Delta;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Delta
+1603;CONSOLIDATED_OUTLAND;Mustang Gamma;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Gamma
+1604;CONSOLIDATED_OUTLAND;Mustang Omega;https://robertsspaceindustries.com/pledge/ships/mustang/Mustang-Omega
+1605;CONSOLIDATED_OUTLAND;Pioneer;https://robertsspaceindustries.com/pledge/ships/pioneer/Pioneer
+1700;CRUSADER_INDUSTRIES;Genesis Starliner;https://robertsspaceindustries.com/pledge/ships/starliner/Genesis-Starliner
+1800;DRAKE_INTERPLANETARY;Buccaneer;https://robertsspaceindustries.com/pledge/ships/drake-buccaneer/Buccaneer
+1801;DRAKE_INTERPLANETARY;Caterpillar;https://robertsspaceindustries.com/pledge/ships/drake-caterpillar/Caterpillar
+1802;DRAKE_INTERPLANETARY;Caterpillar Pirate Edition;https://robertsspaceindustries.com/pledge/ships/drake-caterpillar/Caterpillar-Pirate-Edition
+1803;DRAKE_INTERPLANETARY;Cutlass Black;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Black
+1804;DRAKE_INTERPLANETARY;Cutlass Blue;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Blue
+1805;DRAKE_INTERPLANETARY;Cutlass Red;https://robertsspaceindustries.com/pledge/ships/drake-cutlass/Cutlass-Red
+1806;DRAKE_INTERPLANETARY;Dragonfly Black;https://robertsspaceindustries.com/pledge/ships/drake-dragonfly/Dragonfly-Black
+1807;DRAKE_INTERPLANETARY;Dragonfly Yellowjacket;https://robertsspaceindustries.com/pledge/ships/drake-dragonfly/Dragonfly-Yellowjacket
+1808;DRAKE_INTERPLANETARY;Herald;https://robertsspaceindustries.com/pledge/ships/herald/Herald
+1900;ESPERIA;Blade;https://robertsspaceindustries.com/pledge/ships/vanduul-blade/Blade
+1901;ESPERIA;Glaive;https://robertsspaceindustries.com/pledge/ships/esperia-glaive/Glaive
+1902;ESPERIA;Prowler;https://robertsspaceindustries.com/pledge/ships/prowler/Prowler
+2000;KRUGER_INTERGALACTIC;P52 Merlin;https://robertsspaceindustries.com/pledge/ships/p52-merlin/P52-Merlin
+2001;KRUGER_INTERGALACTIC;P72 Archimedes;https://robertsspaceindustries.com/pledge/ships/p72-archimedes/P72-Archimedes
+2100;MISC;Endeavor;https://robertsspaceindustries.com/pledge/ships/misc-endeavor/Endeavor
+2101;MISC;Freelancer;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer
+2102;MISC;Freelancer DUR;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-DUR
+2103;MISC;Freelancer MAX;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-MAX
+2104;MISC;Freelancer MIS;https://robertsspaceindustries.com/pledge/ships/misc-freelancer/Freelancer-MIS
+2105;MISC;Hull A;https://robertsspaceindustries.com/pledge/ships/hull/Hull-A
+2106;MISC;Hull B;https://robertsspaceindustries.com/pledge/ships/hull/Hull-B
+2107;MISC;Hull C;https://robertsspaceindustries.com/pledge/ships/hull/Hull-C
+2108;MISC;Hull D;https://robertsspaceindustries.com/pledge/ships/hull/Hull-D
+2109;MISC;Hull E;https://robertsspaceindustries.com/pledge/ships/hull/Hull-E
+2110;MISC;Prospector;https://robertsspaceindustries.com/pledge/ships/misc-prospector/Prospector
+2111;MISC;Razor;https://robertsspaceindustries.com/pledge/ships/razor/Razor
+2112;MISC;Reliant Kore;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Kore
+2113;MISC;Reliant Mako;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Mako
+2114;MISC;Reliant Sen;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Sen
+2115;MISC;Reliant Tana;https://robertsspaceindustries.com/pledge/ships/reliant/Reliant-Tana
+2116;MISC;Starfarer;https://robertsspaceindustries.com/pledge/ships/misc-starfarer/Starfarer
+2117;MISC;Starfarer Gemini;http://robertsspaceindustries.com/pledge/ships/misc-starfarer/Starfarer-Gemini
 2200;ORIGIN_JUMPWORKS;300I;http://robertsspaceindustries.com/pledge/ships/origin-300/300i
 2201;ORIGIN_JUMPWORKS;315P;http://robertsspaceindustries.com/pledge/ships/origin-300/315p
 2202;ORIGIN_JUMPWORKS;325A;https://robertsspaceindustries.com/pledge/ships/origin-300/325a
@@ -84,29 +84,29 @@ id;manufacturer;model;url
 2204;ORIGIN_JUMPWORKS;600I EXPLORER;https://robertsspaceindustries.com/pledge/ships/600i/600i-Explorer
 2205;ORIGIN_JUMPWORKS;600I TOURING;https://robertsspaceindustries.com/pledge/ships/600i/600i-Touring
 2206;ORIGIN_JUMPWORKS;85X;https://robertsspaceindustries.com/pledge/ships/85x/85X
-2207;ORIGIN_JUMPWORKS;890 JUMP;https://robertsspaceindustries.com/pledge/ships/890-jump/890-Jump
+2207;ORIGIN_JUMPWORKS;890 Jump;https://robertsspaceindustries.com/pledge/ships/890-jump/890-Jump
 2208;ORIGIN_JUMPWORKS;M50;https://robertsspaceindustries.com/pledge/ships/origin-m50/M50
-2209;ORIGIN_JUMPWORKS;X1 BASE;https://robertsspaceindustries.com/pledge/ships/x1/X1-Base
-2210;ORIGIN_JUMPWORKS;X1 FORCE;https://robertsspaceindustries.com/pledge/ships/x1/X1-Force
-2211;ORIGIN_JUMPWORKS;X1 VELOCITY;https://robertsspaceindustries.com/pledge/ships/x1/X1-Velocity
+2209;ORIGIN_JUMPWORKS;X1 Base;https://robertsspaceindustries.com/pledge/ships/x1/X1-Base
+2210;ORIGIN_JUMPWORKS;X1 Force;https://robertsspaceindustries.com/pledge/ships/x1/X1-Force
+2211;ORIGIN_JUMPWORKS;X1 Velocity;https://robertsspaceindustries.com/pledge/ships/x1/X1-Velocity
 2300;RSI;Aurora CL;https://robertsspaceindustries.com/pledge/ships/rsi-aurora/Aurora-CL
 2301;RSI;Aurora ES;https://robertsspaceindustries.com/pledge/ships/rsi-aurora/Aurora-ES
 2302;RSI;Aurora LN;https://robertsspaceindustries.com/pledge/ships/rsi-aurora/Aurora-LN
 2303;RSI;Aurora LX;https://robertsspaceindustries.com/pledge/ships/rsi-aurora/Aurora-LX
 2304;RSI;Aurora MR;https://robertsspaceindustries.com/pledge/ships/rsi-aurora/Aurora-MR
-2305;RSI;CONSTELLATION ANDROMEDA;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Andromeda
-2306;RSI;CONSTELLATION AQUILA;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Aquila
-2307;RSI;CONSTELLATION PHOENIX;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Phoenix
-2308;RSI;CONSTELLATION TAURUS;https://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Taurus
-2309;RSI;ORION;https://robertsspaceindustries.com/pledge/ships/orion/Orion
-2310;RSI;POLARIS;https://robertsspaceindustries.com/pledge/ships/polaris/Polaris
-2311;RSI;URSA ROVER;https://robertsspaceindustries.com/pledge/ships/ursa/Ursa-Rover
-2400;TUMBRIL;CYCLONE;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone
-2401;TUMBRIL;CYCLONE-AA;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-AA
-2402;TUMBRIL;CYCLONE-RC;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-RC
-2403;TUMBRIL;CYCLONE-RN;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-RN
-2404;TUMBRIL;CYCLONE-TR;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-TR
-2500;VANDUUL;SCYTHE;https://robertsspaceindustries.com/pledge/ships/scythe/Scythe
+2305;RSI;Constellation Andromeda;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Andromeda
+2306;RSI;Constellation Aquila;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Aquila
+2307;RSI;Constellation Phoenix;http://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Phoenix
+2308;RSI;Constellation Taurus;https://robertsspaceindustries.com/pledge/ships/rsi-constellation/Constellation-Taurus
+2309;RSI;Orion;https://robertsspaceindustries.com/pledge/ships/orion/Orion
+2310;RSI;Polaris;https://robertsspaceindustries.com/pledge/ships/polaris/Polaris
+2311;RSI;Ursa Rover;https://robertsspaceindustries.com/pledge/ships/ursa/Ursa-Rover
+2400;TUMBRIL;Cyclone;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone
+2401;TUMBRIL;Cyclone-AA;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-AA
+2402;TUMBRIL;Cyclone-RC;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-RC
+2403;TUMBRIL;Cyclone-RN;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-RN
+2404;TUMBRIL;Cyclone-TR;https://robertsspaceindustries.com/pledge/ships/cyclone/Cyclone-TR
+2500;VANDUUL;Scythe;https://robertsspaceindustries.com/pledge/ships/scythe/Scythe
 
 
 
