@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "vehicle",
+            "otherEntityName": "vehicle",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "owner",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "vehicleOwnership"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20171202130411",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "vehicle_ownership",
+    "jpaMetamodelFiltering": true,
+    "pagination": "infinite-scroll"
+}

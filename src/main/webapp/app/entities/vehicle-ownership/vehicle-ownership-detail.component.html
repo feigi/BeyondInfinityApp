@@ -1,0 +1,31 @@
+
+<div *ngIf="vehicleOwnership">
+    <h2><span>Vehicle Ownership</span> {{vehicleOwnership.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Vehicle</span></dt>
+        <dd>
+            <div *ngIf="vehicleOwnership.vehicleId">
+                <a [routerLink]="['/vehicle', vehicleOwnership.vehicleId]">{{vehicleOwnership.vehicleId}}</a>
+            </div>
+        </dd>
+        <dt><span>Owner</span></dt>
+        <dd>
+            {{vehicleOwnership.ownerLogin}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'vehicle-ownership/'+ vehicleOwnership.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
