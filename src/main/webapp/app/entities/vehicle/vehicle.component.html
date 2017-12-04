@@ -1,11 +1,26 @@
 <div>
     <h2>
         <span>Vehicles</span>
-        <button class="btn btn-primary float-right jh-create-entity create-vehicle" [routerLink]="['/', { outlets: { popup: ['vehicle-new'] } }]">
+        <button *jhiHasAnyAuthority="'ROLE_ADMIN'" class="btn btn-primary float-right jh-create-entity create-vehicle"
+                [routerLink]="['/', { outlets: { popup: ['vehicle-new'] } }]">
             <span class="fa fa-plus"></span>
-            <span >
+            <span>
             Create new Vehicle
             </span>
+        </button>
+        <button [hidden]="editFleetActive" (click)="toggleEditFleet()" class="btn btn-primary float-right">
+            <span class="fa fa-plus"></span>
+            <span>
+            Edit my Fleet
+            </span>
+        </button>
+        <button type="submit" [disabled]="isSaving" [hidden]="!editFleetActive"
+                class="btn btn-primary float-right" (click)="saveEditVehicles()">
+            <span class="fa fa-save"></span>&nbsp;<span>Save</span>
+        </button>
+        <button type="button" class="btn btn-secondary float-right" data-dismiss="modal" [hidden]="!editFleetActive"
+                (click)="resetEditVehicles()">
+            <span class="fa fa-ban"></span>&nbsp;<span>Cancel</span>
         </button>
     </h2>
     <jhi-alert></jhi-alert>
@@ -16,17 +31,21 @@
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
-            <th jhiSortBy="id"><span>ID</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="manufacturer"><span>Manufacturer</span> <span class="fa fa-sort"></span></th>
-            <th jhiSortBy="model"><span>Model</span> <span class="fa fa-sort"></span></th>
-            <th></th>
+                <th jhiSortBy="manufacturer"><span>Manufacturer</span> <span class="fa fa-sort"></span></th>
+                <th jhiSortBy="model"><span>Model</span> <span class="fa fa-sort"></span></th>
+                <th><span>Owned By Me</span></span></th>
+                <th></th>
             </tr>
             </thead>
-            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']"
+                   [infiniteScrollDistance]="0">
             <tr *ngFor="let vehicle of vehicles ;trackBy: trackId">
-                <td><a [routerLink]="['../vehicle', vehicle.id ]">{{vehicle.id}}</a></td>
                 <td>{{vehicle.manufacturer}}</td>
                 <td><a href="{{vehicle.url}}">{{vehicle.model}}</a></td>
+                <td>
+                    <span class="fa fa-check" style="color: green" [hidden]="!vehicle.ownedByUser"></span>
+                    <span class="fa fa-close" [hidden]="vehicle.ownedByUser"></span>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
@@ -55,4 +74,5 @@
             </tbody>
         </table>
     </div>
+    <br/>
 </div>

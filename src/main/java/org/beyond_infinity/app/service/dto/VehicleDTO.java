@@ -29,6 +29,8 @@ public class VehicleDTO implements Serializable {
 
     private String fullName;
 
+    private boolean ownedByUser;
+
     public Long getId() {
         return id;
     }
@@ -67,6 +69,14 @@ public class VehicleDTO implements Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public boolean isOwnedByUser() {
+        return ownedByUser;
+    }
+
+    public void setOwnedByUser(boolean ownedByUser) {
+        this.ownedByUser = ownedByUser;
     }
 
     @Override

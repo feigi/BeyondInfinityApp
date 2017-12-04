@@ -23,6 +23,8 @@ export class VehicleComponent implements OnInit, OnDestroy {
     queryCount: any;
     reverse: any;
     totalItems: number;
+    editFleetActive: boolean;
+    isSaving: boolean;
 
     constructor(
         private vehicleService: VehicleService,
@@ -39,6 +41,7 @@ export class VehicleComponent implements OnInit, OnDestroy {
         };
         this.predicate = 'id';
         this.reverse = true;
+        this.editFleetActive = false;
     }
 
     loadAll() {
@@ -87,6 +90,20 @@ export class VehicleComponent implements OnInit, OnDestroy {
             result.push('id');
         }
         return result;
+    }
+
+    toggleEditFleet() {
+        this.editFleetActive = !this.editFleetActive;
+    }
+
+    resetEditVehicles() {
+        // TODO: reset all changes
+        this.toggleEditFleet();
+    }
+
+    saveEditVehicles() {
+        // TODO: Persist changes
+        this.toggleEditFleet();
     }
 
     private onSuccess(data, headers) {

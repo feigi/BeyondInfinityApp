@@ -1,8 +1,15 @@
 package org.beyond_infinity.app.service;
 
 
-import java.util.List;
-
+import io.github.jhipster.service.QueryService;
+import org.beyond_infinity.app.domain.Vehicle;
+import org.beyond_infinity.app.domain.VehicleOwnership;
+import org.beyond_infinity.app.domain.Vehicle_;
+import org.beyond_infinity.app.repository.VehicleOwnershipRepository;
+import org.beyond_infinity.app.repository.VehicleRepository;
+import org.beyond_infinity.app.service.dto.VehicleCriteria;
+import org.beyond_infinity.app.service.dto.VehicleDTO;
+import org.beyond_infinity.app.service.mapper.VehicleMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -11,16 +18,7 @@ import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import io.github.jhipster.service.QueryService;
-
-import org.beyond_infinity.app.domain.Vehicle;
-import org.beyond_infinity.app.domain.*; // for static metamodels
-import org.beyond_infinity.app.repository.VehicleRepository;
-import org.beyond_infinity.app.service.dto.VehicleCriteria;
-
-import org.beyond_infinity.app.service.dto.VehicleDTO;
-import org.beyond_infinity.app.service.mapper.VehicleMapper;
-import org.beyond_infinity.app.domain.enumeration.Manufacturer;
+import java.util.List;
 
 /**
  * Service for executing complex queries for Vehicle entities in the database.
@@ -39,13 +37,18 @@ public class VehicleQueryService extends QueryService<Vehicle> {
 
     private final VehicleMapper vehicleMapper;
 
-    public VehicleQueryService(VehicleRepository vehicleRepository, VehicleMapper vehicleMapper) {
+    private final VehicleOwnershipRepository vehicleOwnershipRepository;
+
+    public VehicleQueryService(VehicleRepository vehicleRepository, VehicleMapper vehicleMapper,
+                               VehicleOwnershipRepository vehicleOwnershipRepository) {
         this.vehicleRepository = vehicleRepository;
         this.vehicleMapper = vehicleMapper;
+        this.vehicleOwnershipRepository = vehicleOwnershipRepository;
     }
 
     /**
      * Return a {@link List} of {@link VehicleDTO} which matches the criteria from the database
+     *
      * @param criteria The object which holds all the filters, which the entities should match.
      * @return the matching entities.
      */
@@ -53,21 +56,24 @@ public class VehicleQueryService extends QueryService<Vehicle> {
     public List<VehicleDTO> findByCriteria(VehicleCriteria criteria) {
         log.debug("find by criteria : {}", criteria);
         final Specifications<Vehicle> specification = createSpecification(criteria);
-        return vehicleMapper.toDto(vehicleRepository.findAll(specification));
+        List<VehicleOwnership> ownershipsCurrentUser = vehicleOwnershipRepository.findByOwnerIsCurrentUser();
+        return vehicleMapper.toDto(vehicleRepository.findAll(specification), ownershipsCurrentUser);
     }
 
     /**
      * Return a {@link Page} of {@link VehicleDTO} which matches the criteria from the database
+     *
      * @param criteria The object which holds all the filters, which the entities should match.
-     * @param page The page, which should be returned.
+     * @param page     The page, which should be returned.
      * @return the matching entities.
      */
     @Transactional(readOnly = true)
     public Page<VehicleDTO> findByCriteria(VehicleCriteria criteria, Pageable page) {
         log.debug("find by criteria : {}, page: {}", criteria, page);
         final Specifications<Vehicle> specification = createSpecification(criteria);
+        List<VehicleOwnership> ownershipsCurrentUser = vehicleOwnershipRepository.findByOwnerIsCurrentUser();
         final Page<Vehicle> result = vehicleRepository.findAll(specification, page);
-        return result.map(vehicleMapper::toDto);
+        return result.map(entity -> vehicleMapper.toDto(entity, ownershipsCurrentUser));
     }
 
     /**
@@ -88,6 +94,9 @@ public class VehicleQueryService extends QueryService<Vehicle> {
             if (criteria.getUrl() != null) {
                 specification = specification.and(buildStringSpecification(criteria.getUrl(), Vehicle_.url));
             }
+            /*if (criteria.getOwnedByUser() != null) {
+                specification = specification.and(buildStringSpecification(criteria.getUrl(), Vehicle_.url));
+            }*/
         }
         return specification;
     }

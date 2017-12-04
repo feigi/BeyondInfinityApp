@@ -5,6 +5,9 @@ import org.beyond_infinity.app.service.dto.VehicleDTO;
 
 import org.mapstruct.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Mapper for the entity Vehicle and its DTO VehicleDTO.
  */
@@ -12,8 +15,21 @@ import org.mapstruct.*;
 public interface VehicleMapper extends EntityMapper<VehicleDTO, Vehicle> {
 
 
-    @Mapping(source = "vehicle.fullName", target = "fullName")
-    VehicleDTO toDto(Vehicle vehicle);
+    @Named("primary")
+    @Mapping(expression = "java( toUserIsOwner(vehicle, ownerships) )", target = "ownedByUser")
+    VehicleDTO toDto(Vehicle vehicle, @Context List<VehicleOwnership> ownerships);
+
+    @IterableMapping(qualifiedByName = "primary")
+    List<VehicleDTO> toDto(List<Vehicle> vehicle, @Context List<VehicleOwnership> ownerships);
+
+    default boolean toUserIsOwner(Vehicle vehicle, List<VehicleOwnership> ownerships) {
+        if (vehicle == null || ownerships == null) {
+            return false;
+        }
+        return ownerships.stream()
+            .map(VehicleOwnership::getVehicle)
+            .anyMatch(aVehicle -> aVehicle.equals(vehicle));
+    }
 
     default Vehicle fromId(Long id) {
         if (id == null) {
