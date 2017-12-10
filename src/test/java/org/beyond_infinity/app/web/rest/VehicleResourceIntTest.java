@@ -8,7 +8,6 @@ import org.beyond_infinity.app.service.VehicleService;
 import org.beyond_infinity.app.service.dto.VehicleDTO;
 import org.beyond_infinity.app.service.mapper.VehicleMapper;
 import org.beyond_infinity.app.web.rest.errors.ExceptionTranslator;
-import org.beyond_infinity.app.service.dto.VehicleCriteria;
 import org.beyond_infinity.app.service.VehicleQueryService;
 
 import org.junit.Before;

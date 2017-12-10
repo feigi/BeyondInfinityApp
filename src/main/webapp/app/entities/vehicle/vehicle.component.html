@@ -43,8 +43,11 @@
                 <td>{{vehicle.manufacturer}}</td>
                 <td><a href="{{vehicle.url}}">{{vehicle.model}}</a></td>
                 <td>
-                    <span class="fa fa-check" style="color: green" [hidden]="!vehicle.ownedByUser"></span>
-                    <span class="fa fa-close" [hidden]="vehicle.ownedByUser"></span>
+                    <div [hidden]="editFleetActive">
+                        <span class="fa fa-check" style="color: green" [hidden]="!vehicle.ownedByUser"></span>
+                        <span class="fa fa-close" [hidden]="vehicle.ownedByUser"></span>
+                    </div>
+                    <input type="checkbox" [hidden]="!editFleetActive" [(ngModel)]="vehicle.ownedByUser">
                 </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">

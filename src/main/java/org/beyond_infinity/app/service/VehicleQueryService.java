@@ -7,6 +7,7 @@ import org.beyond_infinity.app.domain.VehicleOwnership;
 import org.beyond_infinity.app.domain.Vehicle_;
 import org.beyond_infinity.app.repository.VehicleOwnershipRepository;
 import org.beyond_infinity.app.repository.VehicleRepository;
+import org.beyond_infinity.app.security.SecurityUtils;
 import org.beyond_infinity.app.service.dto.VehicleCriteria;
 import org.beyond_infinity.app.service.dto.VehicleDTO;
 import org.beyond_infinity.app.service.mapper.VehicleMapper;
@@ -18,6 +19,8 @@ import org.springframework.data.jpa.domain.Specifications;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -56,7 +59,12 @@ public class VehicleQueryService extends QueryService<Vehicle> {
     public List<VehicleDTO> findByCriteria(VehicleCriteria criteria) {
         log.debug("find by criteria : {}", criteria);
         final Specifications<Vehicle> specification = createSpecification(criteria);
-        List<VehicleOwnership> ownershipsCurrentUser = vehicleOwnershipRepository.findByOwnerIsCurrentUser();
+
+        List<VehicleOwnership> ownershipsCurrentUser = new ArrayList<>();
+        if (SecurityUtils.isAuthenticated()) {
+            ownershipsCurrentUser.addAll(vehicleOwnershipRepository.findByOwnerIsCurrentUser());
+        }
+
         return vehicleMapper.toDto(vehicleRepository.findAll(specification), ownershipsCurrentUser);
     }
 
@@ -71,7 +79,12 @@ public class VehicleQueryService extends QueryService<Vehicle> {
     public Page<VehicleDTO> findByCriteria(VehicleCriteria criteria, Pageable page) {
         log.debug("find by criteria : {}, page: {}", criteria, page);
         final Specifications<Vehicle> specification = createSpecification(criteria);
-        List<VehicleOwnership> ownershipsCurrentUser = vehicleOwnershipRepository.findByOwnerIsCurrentUser();
+
+        List<VehicleOwnership> ownershipsCurrentUser = new ArrayList<>();
+        if (SecurityUtils.isAuthenticated()) {
+            ownershipsCurrentUser.addAll(vehicleOwnershipRepository.findByOwnerIsCurrentUser());
+        }
+
         final Page<Vehicle> result = vehicleRepository.findAll(specification, page);
         return result.map(entity -> vehicleMapper.toDto(entity, ownershipsCurrentUser));
     }

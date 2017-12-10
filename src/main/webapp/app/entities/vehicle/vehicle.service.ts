@@ -29,6 +29,13 @@ export class VehicleService {
         });
     }
 
+    updateMyVehicles(vehicles: Vehicle[]): Observable<Vehicle[]> {
+        return this.http.put(this.resourceUrl + '/mine', vehicles).map((res: Response) => {
+            const jsonResponse = res.json();
+            return jsonResponse;
+        });
+    }
+
     find(id: number): Observable<Vehicle> {
         return this.http.get(`${this.resourceUrl}/${id}`).map((res: Response) => {
             const jsonResponse = res.json();

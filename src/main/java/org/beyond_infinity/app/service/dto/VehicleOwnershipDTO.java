@@ -1,10 +1,7 @@
 package org.beyond_infinity.app.service.dto;
 
 
-import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -62,6 +59,23 @@ public class VehicleOwnershipDTO implements Serializable {
         this.ownerLogin = userLogin;
     }
 
+    public boolean equalOwnership(VehicleOwnershipDTO vehicleOwnershipDTO) {
+        if (this == vehicleOwnershipDTO) {
+            return true;
+        }
+        if (vehicleOwnershipDTO == null || getClass() != vehicleOwnershipDTO.getClass()) {
+            return false;
+        }
+        if (vehicleOwnershipDTO.getVehicleId() == null || getVehicleId() == null) {
+            return false;
+        }
+        if (vehicleOwnershipDTO.getOwnerId() == null || getOwnerId() == null) {
+            return false;
+        }
+        return Objects.equals(getVehicleId(), vehicleOwnershipDTO.getVehicleId())
+            && Objects.equals(getOwnerId(), vehicleOwnershipDTO.getOwnerId());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -72,7 +86,7 @@ public class VehicleOwnershipDTO implements Serializable {
         }
 
         VehicleOwnershipDTO vehicleOwnershipDTO = (VehicleOwnershipDTO) o;
-        if(vehicleOwnershipDTO.getId() == null || getId() == null) {
+        if (vehicleOwnershipDTO.getId() == null || getId() == null) {
             return false;
         }
         return Objects.equals(getId(), vehicleOwnershipDTO.getId());

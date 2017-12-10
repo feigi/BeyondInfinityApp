@@ -1,5 +1,6 @@
 package org.beyond_infinity.app.service;
 
+import org.beyond_infinity.app.domain.Vehicle;
 import org.beyond_infinity.app.domain.VehicleOwnership;
 import org.beyond_infinity.app.repository.VehicleOwnershipRepository;
 import org.beyond_infinity.app.service.dto.VehicleOwnershipDTO;
@@ -10,6 +11,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 
 /**
@@ -41,6 +46,22 @@ public class VehicleOwnershipService {
         VehicleOwnership vehicleOwnership = vehicleOwnershipMapper.toEntity(vehicleOwnershipDTO);
         vehicleOwnership = vehicleOwnershipRepository.save(vehicleOwnership);
         return vehicleOwnershipMapper.toDto(vehicleOwnership);
+    }
+
+    public void updateMyVehicles(List<VehicleOwnershipDTO> futureOwnedVehiclesDtos) {
+        List<VehicleOwnershipDTO> currentlyOwnedVehicles = vehicleOwnershipMapper
+            .toDto(vehicleOwnershipRepository.findByOwnerIsCurrentUser());
+
+        List<VehicleOwnershipDTO> toBeAdded = futureOwnedVehiclesDtos.stream()
+            .filter(futureOwned -> currentlyOwnedVehicles.stream()
+                .noneMatch(futureOwned::equalOwnership)).collect(toList());
+
+        List<VehicleOwnershipDTO> toBeDeleted = currentlyOwnedVehicles.stream()
+            .filter(currentlyOwned -> futureOwnedVehiclesDtos.stream()
+                .noneMatch(currentlyOwned::equalOwnership)).collect(toList());
+
+        vehicleOwnershipRepository.save(vehicleOwnershipMapper.toEntity(toBeAdded));
+        vehicleOwnershipRepository.delete(vehicleOwnershipMapper.toEntity(toBeDeleted));
     }
 
     /**

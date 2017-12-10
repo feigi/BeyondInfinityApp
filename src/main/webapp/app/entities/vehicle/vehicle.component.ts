@@ -102,6 +102,8 @@ export class VehicleComponent implements OnInit, OnDestroy {
     }
 
     saveEditVehicles() {
+        this.isSaving = true;
+        this.vehicleService.updateMyVehicles(this.vehicles).subscribe();
         // TODO: Persist changes
         this.toggleEditFleet();
     }

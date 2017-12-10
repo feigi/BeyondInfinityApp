@@ -1,14 +1,14 @@
 package org.beyond_infinity.app.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.web.util.ResponseUtil;
+import org.beyond_infinity.app.service.VehicleQueryService;
 import org.beyond_infinity.app.service.VehicleService;
+import org.beyond_infinity.app.service.dto.VehicleCriteria;
+import org.beyond_infinity.app.service.dto.VehicleDTO;
 import org.beyond_infinity.app.web.rest.errors.BadRequestAlertException;
 import org.beyond_infinity.app.web.rest.util.HeaderUtil;
 import org.beyond_infinity.app.web.rest.util.PaginationUtil;
-import org.beyond_infinity.app.service.dto.VehicleDTO;
-import org.beyond_infinity.app.service.dto.VehicleCriteria;
-import org.beyond_infinity.app.service.VehicleQueryService;
-import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -32,10 +31,8 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class VehicleResource {
 
-    private final Logger log = LoggerFactory.getLogger(VehicleResource.class);
-
     private static final String ENTITY_NAME = "vehicle";
-
+    private final Logger log = LoggerFactory.getLogger(VehicleResource.class);
     private final VehicleService vehicleService;
 
     private final VehicleQueryService vehicleQueryService;

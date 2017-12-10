@@ -1,5 +1,6 @@
 package org.beyond_infinity.app.security;
 
+import org.beyond_infinity.app.domain.User;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
