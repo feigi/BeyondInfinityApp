@@ -97,13 +97,16 @@ export class VehicleComponent implements OnInit, OnDestroy {
     }
 
     resetEditVehicles() {
-        // TODO: reset all changes
+        this.reset();
         this.toggleEditFleet();
     }
 
     saveEditVehicles() {
         this.isSaving = true;
-        this.vehicleService.updateMyVehicles(this.vehicles).subscribe();
+        this.vehicleService.updateMyVehicles(this.vehicles).subscribe(
+            (res: Vehicle[]) => this.isSaving = false,
+            (res: ResponseWrapper) => this.onError(res.json)
+        );
         // TODO: Persist changes
         this.toggleEditFleet();
     }
@@ -117,6 +120,7 @@ export class VehicleComponent implements OnInit, OnDestroy {
     }
 
     private onError(error) {
+        this.isSaving = false;
         this.jhiAlertService.error(error.message, null, null);
     }
 }
