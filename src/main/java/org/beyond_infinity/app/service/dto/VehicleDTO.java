@@ -5,6 +5,7 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.beyond_infinity.app.domain.enumeration.Manufacturer;
@@ -29,7 +30,8 @@ public class VehicleDTO implements Serializable {
 
     private String fullName;
 
-    private boolean ownedByUser;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Boolean ownedByUser;
 
     public Long getId() {
         return id;
@@ -71,7 +73,7 @@ public class VehicleDTO implements Serializable {
         this.fullName = fullName;
     }
 
-    public boolean isOwnedByUser() {
+    public Boolean isOwnedByUser() {
         return ownedByUser;
     }
 

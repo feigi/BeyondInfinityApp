@@ -21,7 +21,7 @@ public interface VehicleMapper extends EntityMapper<VehicleDTO, Vehicle> {
     VehicleDTO toDto(Vehicle vehicle, @Context List<VehicleOwnership> ownerships);
 
     @IterableMapping(qualifiedByName = "primary")
-    List<VehicleDTO> toDto(List<Vehicle> vehicle, @Context List<VehicleOwnership> ownerships);
+    List<VehicleDTO> toDto(List<Vehicle> vehicles, @Context List<VehicleOwnership> ownerships);
 
     default VehicleOwnershipDTO toVehicleOwnershipDto(VehicleDTO vehicleDto, User user) {
         if (!vehicleDto.isOwnedByUser()) {

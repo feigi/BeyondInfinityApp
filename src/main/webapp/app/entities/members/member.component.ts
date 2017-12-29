@@ -67,7 +67,7 @@ export class MemberComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.eventManager.destroy(this.eventSubscriber);
+        //this.eventManager.destroy(this.eventSubscriber);
     }
 
     trackId(index: number, item: User) {

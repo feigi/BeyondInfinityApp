@@ -1,5 +1,6 @@
 package org.beyond_infinity.app.repository;
 
+import org.beyond_infinity.app.domain.User;
 import org.beyond_infinity.app.domain.VehicleOwnership;
 import org.springframework.stereotype.Repository;
 
@@ -16,4 +17,5 @@ public interface VehicleOwnershipRepository extends JpaRepository<VehicleOwnersh
     @Query("select vehicle_ownership from VehicleOwnership vehicle_ownership where vehicle_ownership.owner.login = ?#{principal.username}")
     List<VehicleOwnership> findByOwnerIsCurrentUser();
 
+    List<VehicleOwnership> findByOwner(User owner);
 }
