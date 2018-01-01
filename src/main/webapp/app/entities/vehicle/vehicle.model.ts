@@ -23,6 +23,7 @@ export class Vehicle implements BaseEntity {
         public manufacturer?: Manufacturer,
         public model?: string,
         public url?: string,
+        public ownedByUser?: boolean
     ) {
     }
 }

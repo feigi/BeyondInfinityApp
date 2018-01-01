@@ -63,20 +63,20 @@ export class MemberComponent implements OnInit, OnDestroy {
         this.principal.identity().then((account) => {
             this.currentAccount = account;
         });
-        // this.registerChangeInVehicles();
+        this.registerChangeInMembers();
     }
 
     ngOnDestroy() {
-        //this.eventManager.destroy(this.eventSubscriber);
+        this.eventManager.destroy(this.eventSubscriber);
     }
 
     trackId(index: number, item: User) {
         return item.id;
     }
 
-/*    registerChangeInVehicles() {
-        this.eventSubscriber = this.eventManager.subscribe('vehicleListModification', (response) => this.reset());
-    }*/
+    registerChangeInMembers() {
+        this.eventSubscriber = this.eventManager.subscribe('memberListModification', (response) => this.reset());
+    }
 
     sort() {
         const result = [this.predicate + ',' + (this.reverse ? 'asc' : 'desc')];
