@@ -36,6 +36,13 @@ export class VehicleOwnershipService {
         });
     }
 
+    findBy(vehicleId: number, userId: number): Observable<VehicleOwnership> {
+        return this.http.get(`${this.resourceUrl}?vehicleId.equals=${vehicleId}&ownerId.equals=${userId}`).map((res: Response) => {
+            const jsonResponse = res.json();
+            return this.convertItemFromServer(jsonResponse);
+        });
+    }
+
     query(req?: any): Observable<ResponseWrapper> {
         const options = createRequestOption(req);
         return this.http.get(this.resourceUrl, options)

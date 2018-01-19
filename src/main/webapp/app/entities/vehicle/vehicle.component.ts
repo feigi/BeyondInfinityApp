@@ -107,7 +107,6 @@ export class VehicleComponent implements OnInit, OnDestroy {
             (res: Vehicle[]) => this.isSaving = false,
             (res: ResponseWrapper) => this.onError(res.json)
         );
-        // TODO: Persist changes
         this.toggleEditFleet();
     }
 

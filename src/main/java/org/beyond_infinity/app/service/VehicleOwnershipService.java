@@ -99,4 +99,8 @@ public class VehicleOwnershipService {
         log.debug("Request to delete VehicleOwnership : {}", id);
         vehicleOwnershipRepository.delete(id);
     }
+
+    public void delete(Long userId, Long vehicleId) {
+        vehicleOwnershipRepository.delete(userId, vehicleId);
+    }
 }

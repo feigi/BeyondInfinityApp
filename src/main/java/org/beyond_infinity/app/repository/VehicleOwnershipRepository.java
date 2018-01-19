@@ -14,8 +14,11 @@ import java.util.List;
 @Repository
 public interface VehicleOwnershipRepository extends JpaRepository<VehicleOwnership, Long>, JpaSpecificationExecutor<VehicleOwnership> {
 
-    @Query("select vehicle_ownership from VehicleOwnership vehicle_ownership where vehicle_ownership.owner.login = ?#{principal.username}")
+    @Query("select vo from VehicleOwnership vo where vo.owner.login = ?#{principal.username}")
     List<VehicleOwnership> findByOwnerIsCurrentUser();
 
     List<VehicleOwnership> findByOwner(User owner);
+
+    @Query("delete from VehicleOwnership vo where vo.owner.id = :userId and vo.vehicle.id = :vehicleId")
+    VehicleOwnership delete(Long userId, Long vehicleId);
 }

@@ -8,9 +8,13 @@ import {
     MemberDetailComponent,
     memberRoute,
 } from './';
+import {UnfleetDialogComponent, UnfleetPopupComponent} from './unfleet-dialog.component';
+import {UnfleetPopupService} from './unfleet-popup.service';
+import {memberPopupRoute} from './member.route';
 
 const ENTITY_STATES = [
     ...memberRoute,
+    ...memberPopupRoute
 ];
 
 @NgModule({
@@ -21,12 +25,16 @@ const ENTITY_STATES = [
     declarations: [
         MemberComponent,
         MemberDetailComponent,
+        UnfleetDialogComponent,
+        UnfleetPopupComponent
     ],
     entryComponents: [
-        MemberComponent
+        MemberComponent,
+        UnfleetDialogComponent
     ],
     providers: [
-        MemberService
+        MemberService,
+        UnfleetPopupService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

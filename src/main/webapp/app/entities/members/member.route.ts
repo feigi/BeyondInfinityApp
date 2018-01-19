@@ -4,6 +4,9 @@ import {UserRouteAccessService} from '../../shared';
 
 import {MemberComponent} from './member.component';
 import {MemberDetailComponent} from './member-detail.component';
+import {VehiclePopupComponent} from '../vehicle/vehicle-dialog.component';
+import {VehicleDeletePopupComponent} from '../vehicle/vehicle-delete-dialog.component';
+import {UnfleetPopupComponent} from './unfleet-dialog.component';
 
 export const memberRoute: Routes = [
     {
@@ -13,7 +16,6 @@ export const memberRoute: Routes = [
             authorities: ['ROLE_USER'],
             pageTitle: 'Vehicles'
         },
-        canActivate: [UserRouteAccessService]
     }, {
         path: 'member/:id',
         component: MemberDetailComponent,
@@ -21,6 +23,17 @@ export const memberRoute: Routes = [
             authorities: ['ROLE_USER'],
             pageTitle: 'Vehicles'
         },
-        canActivate: [UserRouteAccessService]
+    }
+];
+
+export const memberPopupRoute: Routes = [
+    {
+        path: 'member/:userId/unfleet/:vehicleId',
+        component: UnfleetPopupComponent,
+        data: {
+            authorities: ['ROLE_USER'],
+            pageTitle: 'Vehicles'
+        },
+        outlet: 'popup'
     }
 ];

@@ -13,6 +13,10 @@ import {MemberService} from './member.service';
 export class MemberDetailComponent implements OnInit, OnDestroy {
 
     member: Member;
+    links: any;
+    page: any;
+    predicate: any;
+    reverse: any;
     private subscription: Subscription;
     private eventSubscriber: Subscription;
 
@@ -26,6 +30,7 @@ export class MemberDetailComponent implements OnInit, OnDestroy {
             this.load(params['id']);
         });
         this.registerChangeInMembers();
+        this.registerChangeInVehicleOwnerships();
     }
 
     load(id) {
@@ -46,7 +51,14 @@ export class MemberDetailComponent implements OnInit, OnDestroy {
     registerChangeInMembers() {
         this.eventSubscriber = this.eventManager.subscribe(
             'memberListModification',
-            (response) => this.load(this.member.id)
+            () => this.load(this.member.id)
+        );
+    }
+
+    private registerChangeInVehicleOwnerships() {
+        this.eventSubscriber = this.eventManager.subscribe(
+            'vehicleOwnershipListModification',
+            () => this.load(this.member.id)
         );
     }
 }
