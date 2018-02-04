@@ -2,7 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs/Rx';
 import {JhiAlertService, JhiEventManager, JhiParseLinks} from 'ng-jhipster';
 
-import {ITEMS_PER_PAGE, Principal, ResponseWrapper, User, UserService} from '../../shared';
+import {ITEMS_PER_PAGE, Principal, ResponseWrapper, User} from '../../shared';
+import {MemberService} from './member.service';
 
 @Component({
     selector: 'jhi-member',
@@ -21,7 +22,7 @@ export class MemberComponent implements OnInit, OnDestroy {
     reverse: any;
     totalItems: number;
 
-    constructor(private userService: UserService,
+    constructor(private memberService: MemberService,
                 private jhiAlertService: JhiAlertService,
                 private eventManager: JhiEventManager,
                 private parseLinks: JhiParseLinks,
@@ -37,7 +38,7 @@ export class MemberComponent implements OnInit, OnDestroy {
     }
 
     loadAll() {
-        this.userService.query({
+        this.memberService.query({
             page: this.page,
             size: this.itemsPerPage,
             sort: this.sort()

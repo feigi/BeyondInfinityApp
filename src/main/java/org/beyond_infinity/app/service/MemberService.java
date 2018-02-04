@@ -6,7 +6,11 @@ import org.beyond_infinity.app.repository.UserRepository;
 import org.beyond_infinity.app.repository.VehicleOwnershipRepository;
 import org.beyond_infinity.app.service.dto.MemberDTO;
 import org.beyond_infinity.app.service.mapper.MemberMapper;
+import org.beyond_infinity.app.web.rest.util.PaginationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,14 +36,9 @@ public class MemberService {
         this.memberMapper = memberMapper;
     }
 
-    public List<MemberDTO> getMembers() {
-        List<User> users = userRepository.findAll();
-        if (users.isEmpty()) {
-            return emptyList();
-        }
-        return users.stream()
-            .map(user -> memberMapper.toDto(user, vehicleOwnershipRepository.findByOwner(user)))
-            .collect(toList());
+    public Page<MemberDTO> getMembers(Pageable pageable) {
+        Page<User> users = userRepository.findByHiddenFalse(pageable);
+        return users.map(user -> memberMapper.toDto(user, vehicleOwnershipRepository.findByOwner(user)));
     }
 
     public MemberDTO getMember(Long userId) {
